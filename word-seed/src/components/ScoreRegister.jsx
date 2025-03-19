@@ -1,8 +1,12 @@
 import React from 'react'
 
-const ScoreRegister=() => {
+const ScoreRegister=({score}) => {
+    
   return (
-    <div>ScoreRegister</div>
+    <div>
+        <h2>Score:</h2>
+        <p>{ score}</p>
+    </div>
   )
 }
 
