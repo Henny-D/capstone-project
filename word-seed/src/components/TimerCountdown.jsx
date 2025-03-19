@@ -1,8 +1,12 @@
 import React from 'react'
 
 const TimerCountdown=() => {
+
   return (
-    <div>TimerCountdown</div>
+    <div>
+        <h2>Timer:</h2>        
+        <p>{time} s</p>
+    </div>
   )
 }
 
