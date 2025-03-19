@@ -5,14 +5,14 @@ const CommingSoon=() =>{
     const navigate = useNavigate();
 
   return (
-    <div>
+    
         <div>
             <h1>Comming Soon!</h1>
-            <p>This game is currently under development. Stay tuned for updates!<br/> Thank You!</p>
+            <p>This game is currently under development. Stay tuned for updates!<br/>ThankYou!</p>
 
             <button onClick={()=> navigate('/GameMode')}>Back</button>
         </div>
-    </div>
+
   );
 }
 

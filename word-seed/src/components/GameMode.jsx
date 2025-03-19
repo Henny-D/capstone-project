@@ -9,8 +9,8 @@ const GameMode=() => {
         <h1>PLAY</h1>
         <div>
             <button onClick={()=> navigate('/App')}>Vocabulary</button>
+            <button onClick={()=> navigate('/commingsoon')}>Antonym</button>
             <button onClick={()=> navigate('/commingsoon')}>Synonym</button>
-            <button onClick={()=> navigate('/commingsoon')}>Word Guess</button>
         </div>
     </div>
   );
