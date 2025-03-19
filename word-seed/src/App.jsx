@@ -1,13 +1,33 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import DisplayQuestion from './components/DisplayQuestion';
+import InputAnswer from './components/InputAnswer';
+import TimerCountdown from './components/TimerCountdown';
+import ScoreRegister from './components/ScoreRegister';
+import GameOver from './components/Gameover';
 import './index.css'
 
-function App() {
-  
+const App=() => {
+  const navigate = useNavigate();
 
   return (
-    <>
-      <h1> Word Seed</h1>
-    </>
+    <div>
+      <div> 
+        <button onClick={() =>navigate ('/')}>Home</button>
+        <button onClick={() =>navigate ('/GameMode')}>Games</button>
+      </div>
+      <div>
+
+
+        <>
+            <DisplayQuestion />
+            <InputAnswer  />
+            <TimerCountdown  />
+            <ScoreRegister />
+        </>
+
+      </div>
+    </div>
   )
 }
 
