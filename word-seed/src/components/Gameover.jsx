@@ -1,9 +1,25 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
-const Gameover=() => {
+const GameOver=({ score, restartGame}) => {
+    const navigate = useNavigate();
+
   return (
-    <div>Gameover</div>
-  )
-}
+    <div>
+        <div>
+            <h2>Game Over!</h2>
+            <p>Your Score: <span>{score}</span></p>
 
-export default Gameover
+            <button onClick={restartGame}>
+                Play Again
+            </button>
+
+            <button onClick={()=>navigate('/')}>
+                Home
+            </button>
+        </div>
+    </div>
+  );
+};
+
+export default GameOver

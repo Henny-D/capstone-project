@@ -13,7 +13,7 @@ const Home=() => {
         <div>
             <p>Play & Learn English!</p>
             <p>A . B . C . D </p>
-            <button>START</button>
+            <button onClick={()=> navigate('/GameMode')}>START</button>
         </div>
     </div>
   );
