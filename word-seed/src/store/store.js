@@ -9,5 +9,10 @@ export const useWordStore =create ((set) => ({
         {word: "sad", definition:"Feeling or showing sorrow or unhappy."}
     ],
 
+    getRandomWord: () =>{
+        const {words}=useWordStore.getState();
+        const randomIndex = Math.floor(Math.random()*words.length);
+        return words [randomIndex];
+    },
  
 }));
