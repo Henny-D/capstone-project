@@ -11,7 +11,9 @@ export const useWordStore =create ((set) => ({
 
     getRandomWord: () =>{
         const {words}=useWordStore.getState();
-        const randomIndex = Math.floor(Math.random()*words.length);
+        if (words.length === 0) return "Currently no question available, Please refresh or return back. Thank you!";
+
+        const randomIndex = Math.floor (Math.random () * words.length);
         return words [randomIndex];
     },
  
