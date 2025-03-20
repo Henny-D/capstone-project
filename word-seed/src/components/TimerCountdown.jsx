@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TimerCountdown=() => {
+const TimerCountdown=({time}) => {
 
   return (
     <div>
