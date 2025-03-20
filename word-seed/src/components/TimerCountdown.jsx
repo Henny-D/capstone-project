@@ -1,6 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-const TimerCountdown=({time}) => {
+const TimerCountdown=({setIsGameOver}) => {
+  const [time, setTime] = useState (30);
+
+  useEffect (() => {
+    if (time === 0) {
+      setIsGameOver(true);
+      return;
+    }
+
+    const timer=setTimeout(() =>setTime(time-1), 1000);
+    return () =>clearTimeout(timer);
+  }, [time]);
+
 
   return (
     <div>
