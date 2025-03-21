@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const TimerCountdown=({setIsGameOver}) => {
   const [time, setTime] = useState (30);
