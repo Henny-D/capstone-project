@@ -19,6 +19,7 @@ const InputAnswer=() => {
 
   return (
     <form 
+        onSubmit={handleSubmit}
       
     >
         <input
