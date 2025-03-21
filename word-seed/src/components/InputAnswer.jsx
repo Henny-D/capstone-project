@@ -1,18 +1,23 @@
 import React, { useState} from 'react'
 
-const InputAnswer=() => {
+const InputAnswer=({word, setScore, getNewWord}) => {
     const [answer, setAnswer]= useState('');
+    const [feedback, setFeedback] = useState('');
     
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      if (answer.toLowerCase()=== useWordStore.toLowerCase()) {
+      const isCorrect =answer.trim().toLowerCase() === word.toLowerCase();
+
+      setFeedback (isCorrect ? "Correct!" : "Wrong! Try again.");
+      if (isCorrect) {
         setScore((prevScore) => prevScore + 1);
         setTimeout(() => {
+          setFeedback('')
           getNewWord();
         }, 1000);
       } else {
-        setTimeout(() (''), 1000);
+        setTimeout(() => setFeedback(''), 1000);
       }
       setAnswer('')
     };
