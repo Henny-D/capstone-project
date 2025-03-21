@@ -24,20 +24,20 @@ const InputAnswer=({word, setScore, getNewWord}) => {
 
   return (
     <form 
-        onSubmit={handleSubmit}
-      
-    >
+        onSubmit={handleSubmit}  >
         <input
         type="text"
         value={answer} 
         onChange={(e) => setAnswer(e.target.value)}
         placeholder='Write Your Answer here'
+
         />
         <button
         type="submit">
             Submit
         </button>
-
+        
+        {feedback && <p>{feedback}</p>}
 
         </form>
   );
