@@ -1,10 +1,26 @@
 import React, { useState} from 'react'
 
 const InputAnswer=() => {
-    const [answer, setAnswer]= useState('')
+    const [answer, setAnswer]= useState('');
+    
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      if (answer.toLowerCase()=== useWordStore.toLowerCase()) {
+        setScore((prevScore) => prevScore + 1);
+        setTimeout(() => {
+          getNewWord();
+        }, 1000);
+      } else {
+        setTimeout(() (''), 1000);
+      }
+      setAnswer('')
+    };
 
   return (
-    <form>
+    <form 
+      
+    >
         <input
         type="text"
         value={answer} 
