@@ -6,8 +6,8 @@ const DisplayQuestion=({word}) =>{
     const definition = words.find((item) => item.word===word)?.definition || "Fetching question...";
 
   return (
-    <div>
-        <p>{definition}</p>
+    <div className='bg-yellow-50 rounded-lg shadow-lg p-8 max-w-md w-full text-center font-poppins '>
+        <p className='text-xl text-zinc-800 font-light'>{definition}</p>
     </div>
   );
 }

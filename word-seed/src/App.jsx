@@ -46,7 +46,7 @@ const App=() => {
     };
  
   return (
-    <div>
+    <div class>
       <div> 
         <button onClick={() =>navigate ('/')}>Home</button>
         <button onClick={() =>navigate ('/GameMode')}>Games</button>
