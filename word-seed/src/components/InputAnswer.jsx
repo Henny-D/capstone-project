@@ -9,7 +9,7 @@ const InputAnswer=({word, setScore, getNewWord}) => {
       e.preventDefault();
       const isCorrect =answer.trim().toLowerCase() === word.toLowerCase();
 
-      setFeedback (isCorrect ? "Correct!" : "Wrong! Try again.");
+      setFeedback (isCorrect ? "✔ Correct!" : " ✖ Wrong! Try again.");
       if (isCorrect) {
         setScore((prevScore) => prevScore + 1);
         setTimeout(() => {
@@ -25,7 +25,7 @@ const InputAnswer=({word, setScore, getNewWord}) => {
   return (
     <form 
         onSubmit={handleSubmit} 
-        className='bg-cyan-600 p-6 rounded-lg shadow-lg text-center mt-8'
+        className='bg-cyan-600 p-6 rounded-lg shadow-lg text-center mt-4'
         >
         <input
         type="text"
@@ -44,7 +44,7 @@ const InputAnswer=({word, setScore, getNewWord}) => {
         {feedback && ( 
           <p 
           className={`text-lg font-bold mt-3 ${
-            feedback === 'Correct!' ? 'text-green-500' : 'text-red-500'
+            feedback === 'Correct!' ? 'text-green-600' : 'text-red-500'
           }`} >{feedback}
         </p>
       )}
