@@ -51,8 +51,11 @@ const App=() => {
         <button onClick={() =>navigate ('/GameMode')}>Games</button>
       </div>
       <div>
-
-
+          {isGameOver ? (
+            <GameOver score={score} restartGame={restartGame} />
+          ) : !gameStarted ? (
+            <h2>{getReady > 0 ? getReady : 'Go!'}</h2>
+          ):(
         <>
             <DisplayQuestion />
             <InputAnswer  />
