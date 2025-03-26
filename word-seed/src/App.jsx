@@ -9,6 +9,22 @@ import './index.css'
 
 const App=() => {
   const navigate = useNavigate();
+  const [isGameOver, setIsGameOver] = useState(false);
+  const [score,setScore] = useState(0);
+  const [word, setWord] = usestate('');
+  const [getReady, setGetReady] = useState(3);
+  const [gameStarted, setGameStarted] = useState(false);
+  const getRandomWord = useWordStore ((state) => state.getRandomWord);
+  const getNewWord = () =>{
+    const newWord =getRandomWord();
+    if (newWord) {
+      setWord(newWord.word);
+    }
+  };
+
+  useEffect(() =>{
+    getNewWord();
+  }, []);
 
   return (
     <div>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 const TimerCountdown=({setIsGameOver}) => {
-  const [time, setTime] = useState (30);
+  const [time, setTime] = useState (10);
 
   useEffect (() => {
     if (time === 0) {
