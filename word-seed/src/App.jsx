@@ -26,6 +26,24 @@ const App=() => {
     getNewWord();
   }, []);
 
+  useEffect(()=>{
+    let timer;
+    if(getReady>0) {
+      timer=setTimeout(() => setGetReady(getReady-1), 1000);
+    } else {
+      setGameStarted(true);
+    }
+    return()=> clearTimeout(timer);
+    }, [getReady]);
+
+    const restartGame =() =>{
+      setIsGameOver(false);
+      setScore(0);
+      setGetReady(4);
+      setGameStarted(false);
+      getNewWord();
+    };
+ 
   return (
     <div>
       <div> 
