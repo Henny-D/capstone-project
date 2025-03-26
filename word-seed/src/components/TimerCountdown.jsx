@@ -15,9 +15,9 @@ const TimerCountdown=({setIsGameOver}) => {
 
 
   return (
-    <div>
-        <h2>Timer:</h2>        
-        <p>{time} s</p>
+    <div className='bg-yellow-50 p-2 rounded-lg shadow-md text-center w-40 font-poppins'>
+        <h2 className=' text-lg font-semibold text-gray-700 '>Timer:</h2>        
+        <p className='text-xl font-bold text-red-400'>{time} s</p>
     </div>
   )
 }
