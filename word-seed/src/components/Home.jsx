@@ -15,7 +15,7 @@ const Home=() => {
             <p className='font-poppins text-4xl font-bold text-zinc-700 mb-4'>A . B . C . D </p><br />
             
             <button 
-            className='font-poppins mb-0 px-2 py-2 bg-cyan-600 text-white font-semibold rounded-full shadow-md hover:bg-cyan-900 transition duration-300 '
+            className='font-poppins mb-0 px-3 py-2 bg-cyan-600 text-white font-semibold rounded-full shadow-md hover:bg-cyan-900 transition duration-300 '
             onClick={()=> navigate('/GameMode')}>START</button>
         </div>
     </div>
