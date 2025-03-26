@@ -37,7 +37,13 @@ const InputAnswer=({word, setScore, getNewWord}) => {
             Submit
         </button>
         
-        {feedback && <p>{feedback}</p>}
+        {feedback && ( 
+          <p 
+          className={`text-lg font-bold mt-3 ${
+            feedback === 'Correct !' ? 'text-green-500' : 'text-red-500'}`}
+        
+        >{feedback}
+        </p>)}
 
         </form>
   );
