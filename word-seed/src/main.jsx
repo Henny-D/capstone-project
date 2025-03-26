@@ -1,13 +1,21 @@
-import React, { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import React from 'react'
+import ReactDOM  from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import GameMode from './components/GameMode.jsx'
+import Home from './components/Home.jsx'
+import CommingSoon from './components/CommingSoon.jsx'
 
-createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <BrowserRouter>
-    <App />
-    </BrowserRouter> 
-  </React.StrictMode>,
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render (
+  <Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/GameMode" element={<GameMode />} />
+      <Route path="/App" element={<App />} />
+      <Route path="/commingsoon" element={<CommingSoon />} />
+    </Routes>
+  </Router>
 )

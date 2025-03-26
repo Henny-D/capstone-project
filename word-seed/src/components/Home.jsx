@@ -11,7 +11,7 @@ const Home=() => {
             <h1>Word <br/>Seed</h1>
         </div>
         <div>
-            <p>Play & Learn English!</p>
+            <p className='text-2xl font-semibold text-zinc-700 font-poppins'>Play & Learn English!</p>
             <p>A . B . C . D </p>
             <button onClick={()=> navigate('/GameMode')}>START</button>
         </div>

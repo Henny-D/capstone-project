@@ -5,13 +5,14 @@ import InputAnswer from './components/InputAnswer';
 import TimerCountdown from './components/TimerCountdown';
 import ScoreRegister from './components/ScoreRegister';
 import GameOver from './components/Gameover';
+import useWordStore from './store/Store';
 import './index.css'
 
 const App=() => {
   const navigate = useNavigate();
   const [isGameOver, setIsGameOver] = useState(false);
   const [score,setScore] = useState(0);
-  const [word, setWord] = usestate('');
+  const [word, setWord] = useState('');
   const [getReady, setGetReady] = useState(3);
   const [gameStarted, setGameStarted] = useState(false);
   const getRandomWord = useWordStore ((state) => state.getRandomWord);
@@ -57,15 +58,15 @@ const App=() => {
             <h2>{getReady > 0 ? getReady : 'Go!'}</h2>
           ):(
         <>
-            <DisplayQuestion />
-            <InputAnswer  />
-            <TimerCountdown  />
-            <ScoreRegister />
+            <DisplayQuestion  word ={word}/>
+            <InputAnswer word={word} setScore={setScore} getNewWord ={getNewWord} />
+            <TimerCountdown setIsGameOver={setIsGameOver} key={word} />
+            <ScoreRegister  score={score}/>
         </>
-
+          )}
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default App
