@@ -3,40 +3,115 @@ import { create } from 'zustand';
 
 const useWordStore =create ((set, get) => ({
     words:[
-            {word: "happy", definition:"Feeling or showing pleasure or contentment."}
-           
+            {word: "happy", definition:"Feeling or showing pleasure or contentment."},
+            {word: "sad", definition:"Feeling or showing sorrow or unhappy."},
+            { word: "run", definition: "Move at a speed faster than a walk." },
+            { word: "jump", definition: "Push oneself off a surface and into the air by using one's legs." },
+            { word: "eat", definition: "Put (food) into the mouth and chew and swallow it." },
+            { word: "sleep", definition: "A condition of body and mind such as that which typically recurs for several hours every night, in which the nervous system is relatively inactive, the eyes closed, the postural muscles relaxed, and consciousness practically suspended." },
+            { word: "book", definition: "A written or printed work consisting of pages glued or sewn together along one side and bound in covers." },
+            { word: "tree", definition: "A woody perennial plant, typically having a single stem or trunk growing to a considerable height and bearing lateral branches." },
+            { word: "flower", definition: "The part of a plant that is often brightly colored, that usually has a pleasant smell, and that produces seeds." },
+            { word: "house", definition: "A building for human habitation, especially one that is lived in by a family or small group of people." },
+            { word: "car", definition: "A road vehicle, typically with four wheels, powered by an internal combustion engine or electric motor and able to carry a small number of people." },
+            { word: "computer", definition: "An electronic device for storing and processing data, typically in binary form, according to instructions given to it in a variable program." },
+            { word: "friend", definition: "A person whom one knows and with whom one has a bond of mutual affection, typically exclusive of sexual or family relations." },
+            { word: "school", definition: "An institution for educating children." },
+            { word: "learn", definition: "Gain or acquire knowledge of or skill in (something) by study, experience, or being taught." },
+            { word: "teach", definition: "Impart knowledge to or instruct (someone) as to how to do something." },
+            { word: "play", definition: "Engage in activity for enjoyment and recreation rather than a serious or practical purpose." },
+            { word: "work", definition: "Activity involving mental or physical effort done in order to achieve a purpose or result." },
+            { word: "talk", definition: "Speak in order to give information or express ideas or feelings; converse or communicate by spoken words." },
+            { word: "listen", definition: "Give one's attention to a sound." },
+            { word: "write", definition: "Mark (letters, words, or other symbols) on a surface, typically paper, with a pen, pencil, or similar implement." },
+            { word: "read", definition: "Look at and comprehend the meaning of (written or printed matter) by mentally interpreting the characters or symbols of which it is composed." },
+            { word: "think", definition: "Have a particular opinion, belief, or idea about someone or something." },
+            { word: "feel", definition: "Be aware of (a person or object) through touching or being touched." },
+            { word: "understand", definition: "Perceive the intended meaning of (words, a language, or a speaker)." },
+            { word: "remember", definition: "Have in or be able to bring to one's mind an awareness of (someone or something from the past)." },
+            { word: "forget", definition: "Fail to remember." },
+            { word: "create", definition: "Bring (something) into existence." },
+            { word: "discover", definition: "Find (something or someone) unexpectedly or in the course of a search." },
+            { word: "explore", definition: "Travel through (an unfamiliar area) in order to learn about it." },
+            { word: "imagine", definition: "Form a mental image or concept of." },
+            { word: "dream", definition: "A series of thoughts, images, and sensations occurring in a person's mind during sleep." },
+            { word: "wonder", definition: "Desire or be curious to know something." },
+            { word: "believe", definition: "Accept (something) as true; feel sure of the truth of." },
+            { word: "choose", definition: "Pick out or select (someone or something) from a number of alternatives." },
+            { word: "decide", definition: "Come to a resolution in regard to (something)." },
+            { word: "compare", definition: "Estimate, measure, or note the similarity or dissimilarity between." },
+            { word: "arrange", definition: "Put (things) in a neat, attractive, or required order." },
+            { word: "organize", definition: "Make arrangements or preparations for (an event or activity); coordinate." },
+            { word: "protect", definition: "Keep safe from harm or injury." },
+            { word: "care", definition: "The provision of what is necessary for the health, welfare, maintenance, and protection of someone or something." },
+            { word: "respect", definition: "A feeling of deep admiration for someone or something elicited by their abilities, qualities, or achievements." },
+            { word: "forgive", definition: "Stop feeling angry or resentful towards (someone) for an offense, flaw, or mistake." },
+            { word: "apologize", definition: "Express regret for something that one has done wrong or failed to do." },
+            { word: "encourage", definition: "Give support, confidence, or hope to (someone)." },
+            { word: "celebrate", definition: "Acknowledge (a significant or happy day or event) with a social gathering or enjoyable activity." },
+            { word: "appreciate", definition: "Recognize the full worth of." },
+            { word: "value", definition: "The regard that something is held to deserve; the importance, worth, or usefulness of something." },
+            { word: "consider", definition: "Think carefully about (something), typically before making a decision." },
+            { word: "reflect", definition: "Think deeply or carefully about (something)." },
+            { word: "adventure", definition: "An unusual and exciting, typically hazardous, experience or activity." },
+            { word: "journey", definition: "An act of traveling from one place to another." },
+            { word: "mystery", definition: "Something that is difficult or impossible to understand or explain." },
+            { word: "challenge", definition: "A task or situation that tests someone's abilities." },
+            { word: "discovery", definition: "The act or process of finding or learning something new or unexpected." },
+            { word: "invention", definition: "The action of inventing something, typically a process or device." },
+            { word: "solution", definition: "A means of solving a problem or dealing with a difficult situation." },
+            { word: "question", definition: "A sentence worded or expressed so as to elicit information." },
+            { word: "answer", definition: "A reply to a question." },
+            { word: "knowledge", definition: "Facts, information, and skills acquired through experience or education; the theoretical or practical understanding of a subject." },
+            { word: "wisdom", definition: "The quality of having experience, knowledge, and good judgment; the quality of being wise." },
+            { word: "courage", definition: "The ability to do something that frightens one." },
+            { word: "kindness", definition: "The quality of being friendly, generous, and considerate." },
+            { word: "laughter", definition: "The action or sound of laughing." },
+            { word: "silence", definition: "Complete absence of sound." },
+            { word: "beauty", definition: "A combination of qualities, such as shape, color, or form, that pleases the aesthetic senses, especially the sight." },
+            { word: "nature", definition: "The phenomena of the physical world collectively, including plants, animals, and the landscape and other features and products of the earth, as opposed to humans or human creations." },
+            { word: "universe", definition: "All existing matter and space considered as a whole; the cosmos." },
+            { word: "season", definition: "Each of the four divisions of the year (spring, summer, autumn, and winter) marked by particular weather patterns and daylight hours, resulting from the earth's changing position with regard to the sun." },
+            { word: "mountain", definition: "A large natural elevation of the earth's surface rising abruptly from the surrounding level; a large steep hill." },
+            { word: "river", definition: "A large natural stream of water flowing in a channel to the sea, a lake, or another river." },
+            { word: "ocean", definition: "A very large expanse of sea, in particular, each of the main areas into which the sea is divided geographically." },
+            { word: "forest", definition: "A large area covered chiefly with trees and undergrowth." },
+            { word: "desert", definition: "A waterless, desolate area of land with little or no vegetation, typically one covered with sand." },
+            { word: "island", definition: "A piece of land surrounded by water." },
+            { word: "village", definition: "A group of houses and associated buildings, larger than a hamlet and smaller than a town, situated in a rural area." },
+            { word: "city", definition: "A large town." },
+            { word: "country", definition: "A nation with its own government, occupying a particular territory." },
+            { word: "planet", definition: "A celestial body moving in an elliptical orbit around a star." },
+            { word: "galaxy", definition: "A system of millions or billions of stars, together with gas and dust, held together by gravitational attraction." },
+            { word: "moment", definition: "A very brief period of time." },
+            { word: "memory", definition: "The faculty by which the mind stores and remembers information." },
+            { word: "future", definition: "The time or a period of time following the moment of speaking or writing; what is going to happen." },
+            { word: "present", definition: "The period of time now occurring." },
+            { word: "past", definition: "Gone by in time and no longer existing." },
+            { word: "pattern", definition: "A repeated decorative design." },
+            { word: "system", definition: "A set of connected things or parts forming a complex whole, especially a complex whole formed from smaller parts." },
+            { word: "structure", definition: "The arrangement of and relations between the parts or elements of something complex." },
+            { word: "process", definition: "A series of actions or steps taken in order to achieve a particular end." },
+            { word: "energy", definition: "The strength and vitality required for sustained physical or mental activity." },
+            { word: "motion", definition: "Movement or a particular way of moving." },
+            { word: "change", definition: "Make or become different." },
+            { word: "growth", definition: "The process of increasing in size." },
+            { word: "balance", definition: "An even distribution of weight enabling someone or something to remain upright and steady." },
+            { word: "connection", definition: "A relationship in which a person, thing, or idea is linked or associated with something else." },
+            { word: "communication", definition: "The imparting or exchanging of information or news." },
+            { word: "expression", definition: "The process of making known one's thoughts or feelings." },
+            { word: "experience", definition: "Practical contact with and observation of facts or events." },
+            { word: "imagination", definition: "The faculty or action of forming new ideas, or images or concepts of external objects not present to the senses." },
+            { word: "inspiration", definition: "The process of being mentally stimulated to do or feel something, especially to do something creative." }
     ],
-    
-    fetchWords: async () =>{
-        try {
-            const response = await fetch ("https://api.wordnik.com/v4/words.json/randomWord?api_key=2hepxcoshqkaus4k0wcicdluivdnwfe3l7y0czkcwfs6wlmbj");
-            if (!response.ok) throw new Error();
-
-            const wordData = await response.json();
-            const newWord = wordData.word;
-
-            if (get().words.some(w => w.word === newWord)) return; //checks to not fetch already existed word in state (prevent duplicate words)
-            
-            const definitionResponse =await fetch ("https://api.wordnik.com/v4/word.json/${newWord}/definitions?api_key=2hepxcoshqkaus4k0wcicdluivdnwfe3l7y0czkcwfs6wlmbj");
-            if(!definitionResponse.ok) throw new Error();
-
-            const definitionData =await definitionResponse.json();
-            const definition= definitionData.length >0 ? definitionData[0].text : "Currently no question available, Please refresh or return back. Thank you!";
-
-
-            set({words: [...get().words, { word: newWord, definition}] });
-
-        }  catch {
-            set({words:[...get().words,get().getRandomWord()] });
-        }
-    },
 
     getRandomWord: () =>{
         const {words}=get();
-        return words.length >0 ? words [Math.floor(Math.random()* words.length)] 
+        return words.length >0
+        ?words[Math.floor(Math.random()*words.length)] 
         : "Currently no question available, Please refresh or return back. Thank you!";
-
-    }
+    },
+ 
 }));
 
 export default useWordStore
