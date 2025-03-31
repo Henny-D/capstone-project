@@ -1,15 +1,14 @@
 import React, { useState} from 'react'
 
-const InputAnswer=({word, setScore, getNewWord}) => {
+const InputAnswer=({word, setScore, getNewWord, checkAnswerLogic}) => {
     const [answer, setAnswer]= useState('');
     const [feedback, setFeedback] = useState('');
     
-
     const handleSubmit = (e) => {
       e.preventDefault();
-      const isCorrect =answer.trim().toLowerCase() === word.toLowerCase();
-
-      setFeedback (isCorrect ? "✔ Correct!" : " ✖ Wrong! Try again.");
+      const isCorrect =checkAnswerLogic(answer.trim().toLowerCase();
+       
+      setFeedback (isCorrect ? " Correct!" : " Wrong! Try again.");
       if (isCorrect) {
         setScore((prevScore) => prevScore + 1);
         setTimeout(() => {
@@ -44,7 +43,7 @@ const InputAnswer=({word, setScore, getNewWord}) => {
         {feedback && ( 
           <p 
           className={`text-lg font-bold mt-3 ${
-            feedback === 'Correct!' ? 'text-green-600' : 'text-red-500'
+            feedback.includes  ? 'text-green-600' : 'text-red-500'
           }`} >{feedback}
         </p>
       )}
