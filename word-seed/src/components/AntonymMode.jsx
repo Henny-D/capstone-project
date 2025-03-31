@@ -9,7 +9,8 @@ import AntonymDisplay from "./AntonymDisplay";
 const AntonymMode = () => {
   const [word, setWord] = useState("");
   const [antonyms, setAntonyms] = useState([]);
-  const [input, setInput] = useState("");
+  const [message, setMessage] = useState("");
+  const [input, setInput]= useState("");
   const [score, setScore] = useState(0);
   const [isGameOver, setIsGameOver] = useState(false);
   const [getReady, setGetReady] = useState(3);
@@ -29,14 +30,14 @@ const AntonymMode = () => {
           data[0]?.meanings?.flatMap((meaning) => meaning.antonyms) || [];
         if (antonymList.length > 0) return antonymList;
         else {
-          ("Sorry, no antonyms found for this word. Play again.");
-          navigate("/GameMode");
+          setMessage("Sorry, no antonyms found for this word. Play again.");
+          setTimeout(() => navigate("/GameMode"), 2000);
           return [];
         }
       }
     } catch (error) {
-      ("Fetching words faild, Please try again later or try other Modes");
-      navigate("/GameMode");
+      setMessage("Fetching words faild, Please try again later or try other Modes");
+      setTimeout(()=>navigate("/GameMode"),2000);
       return [];
     }
   };
@@ -69,13 +70,13 @@ const AntonymMode = () => {
     loadNewWord();
   };
 
-  const checkAnsewr = () => {
+  const checkAnswer = () => {
     if (antonyms.includes(input.trim().toLowerCase())) {
       setScore((prev) => prev + 1);
       setInput("");
       loadNewWord();
     } else {
-      alert("Wrong! Try again.");
+      setMessage("Wrong! Try again.");
     }
   };
 
@@ -101,14 +102,16 @@ const AntonymMode = () => {
         <>
           <h2>Antonym</h2>
           <AntonymDisplay word={word} />
+
           <input
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             className=""
           />
+           {message && <p className="text-red-500 font-semibold">{message}</p>}
 
-          <button onClick={checkAnsewr} className="">
+          <button onClick={checkAnswer} className="">
             Submit
           </button>
 
