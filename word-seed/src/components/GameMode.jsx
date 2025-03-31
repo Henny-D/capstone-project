@@ -14,10 +14,10 @@ const GameMode=() => {
             onClick={()=> navigate('/App')}>Vocabulary</button>
 
             <button className='font-poppins text-xl w-full mb-4 px-4 py-2 bg-cyan-600 text-zinc-700 font-semibold rounded-full shadow-md hover:bg-cyan-900 transition duration-300' 
-             onClick={()=> navigate('/commingsoon')}>Antonym</button>
+             onClick={()=> navigate('/antonym')}>Antonym</button>
 
             <button className='font-poppins text-xl w-full mb-4 px-4 py-2 bg-cyan-600 text-zinc-700 font-semibold rounded-full shadow-md hover:bg-cyan-900 transition duration-300' 
-            onClick={()=> navigate('/commingsoon')}>Synonym</button>
+            onClick={()=> navigate('/synonym')}>Synonym</button>
         </div>
     </div>
   );
