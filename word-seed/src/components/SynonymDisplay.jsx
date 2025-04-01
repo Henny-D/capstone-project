@@ -1,5 +1,5 @@
 import React  from "react";
-import synonymModeStore from "../store/synonymModeStore";
+import synonymModeStore from "../store/synonymModeStore.js";
 
 const SynonymDisplay = ({word}) => {
     const words = synonymModeStore((state) => state.words);

@@ -1,5 +1,5 @@
 import React  from "react";
-import antonymModeStore from "../store/antonymModeStore";
+import antonymModeStore from "../store/antonymModeStore.js";
 
 const AntonymDisplay = ({word}) => {
     const words = antonymModeStore((state) => state.words);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import synonymModeStore from "../store/synonymModeStore";
+import synonymModeStore from "../store/synonymModeStore.js";
 import GameOver from "./Gameover";
 import TimerCountdown from "./TimerCountdown";
 import ScoreRegister from "./ScoreRegister";
