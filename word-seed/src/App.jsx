@@ -5,7 +5,7 @@ import InputAnswer from './components/InputAnswer';
 import TimerCountdown from './components/TimerCountdown';
 import ScoreRegister from './components/ScoreRegister';
 import GameOver from './components/Gameover';
-import useWordStore from './store/Store';
+import useWordStore from './store/Store.js';
 import './index.css'
 
 const App=() => {
