@@ -92,7 +92,7 @@ const AntonymMode = () => {
         </button>
         <button className='px-4 py-2 bg-cyan-600 text-white rounded-full shadow-md hover:bg-cyan-900 transition duration-300 '
         onClick={() => navigate("/GameMode")}>
-          Game Mode
+          Games
         </button>
       </div>
 
