@@ -1,5 +1,5 @@
 import React from 'react'
-import useWordStore from '../store/Store';
+import useWordStore from '../store/store';
 
 const DisplayQuestion=({word}) =>{
     const words = useWordStore ((state) =>state.words);

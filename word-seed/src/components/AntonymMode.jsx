@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import antonymModeStore from "../store/AntonymModeStore";
+import antonymModeStore from "../store/antonymModeStore";
 import GameOver from "./Gameover";
 import TimerCountdown from "./TimerCountdown";
 import ScoreRegister from "./ScoreRegister";
