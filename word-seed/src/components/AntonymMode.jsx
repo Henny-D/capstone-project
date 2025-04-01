@@ -73,11 +73,16 @@ const AntonymMode = () => {
   const checkAnswer = () => {
     if (antonyms.includes(input.trim().toLowerCase())) {
       setScore((prev) => prev + 1);
-      setInput("");
-      loadNewWord();
+      setMessage ({text:"Correct !", color:"text-green-600"});
+      setTimeout(()=>{
+        setMessage(null);
+        loadNewWord();
+      }, 1500);
+
     } else {
-      setMessage("Wrong! Try again.");
+      setMessage({text:"Wrong! Try again.", color:"text-red-600"});
     }
+    setInput("");
   };
 
   return (
@@ -93,33 +98,36 @@ const AntonymMode = () => {
         </button>
       </div>
 
-      <div>
+      <div  className='mt-10 text-center font-poppins max-w-md w-full sm:w-1/2 md:w-1/3 lg:w-1/4'>
         {isGameOver ? (
         <GameOver score={score} restartGame={restartGame} />
         ): !gameStarted ? (
-        <h2>{getReady > 0 ? getReady : "Go!"}</h2>
-    ) : (
-        <>
-          <h2>Antonym</h2>
+        <h2 className='text-4xl font-semibold text-zinc-800'>{getReady > 0 ? getReady : "Go!"}</h2>
+      ):(
+        <div>
+          <h2 className='font-poppins text-5xl font-bold text-zinc-800 mb-4'>Antonym</h2>
           <AntonymDisplay word={word} />
 
           <input
             type="text"
             value={input}
+            placeholder='Write Your Answer here'
+            className='mt-3 w-full p-3 text-lg rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-900'
             onChange={(e) => setInput(e.target.value)}
-            className=""
+            
           />
-           {message && <p className="text-red-500 font-semibold">{message}</p>}
+           {message && (<p className={`text-lg font-bold mt-3 ${message.color}`}>{message.text}</p>)}
 
-          <button onClick={checkAnswer} className="">
+
+          <button onClick={checkAnswer}  className='mt-4 px-6 py-2 bg-cyan-600 border border-white text-white font-semibold rounded-full shadow-md hover:bg-cyan-900 transition duration-300'>
             Submit
           </button>
 
-          <div className="">
+          <div className='mt-2 flex gap-4 bg-cyan-600 p-4 rounded-lg shadow-lg text-center '>
             <TimerCountdown setIsGameOver={setIsGameOver} key={word} />
             <ScoreRegister score={score} />
           </div>
-        </>
+        </div>
         )}
       </div>
     </div>
