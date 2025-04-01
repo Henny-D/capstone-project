@@ -18,26 +18,24 @@ const AntonymMode = () => {
   const navigate = useNavigate();
   const getRandomWord = antonymModeStore((state) => state.getRandomWord);
 
+  const handleError= (message)=>{
+    setMessage(message);
+    setTimeout(()=> navigate ('/GameMode'), 2000);
+  };
+
   const fetchAntonyms = async (word) => {
     try {
-      const response = await fetch(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
-      );
+      const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
+      if (!response.ok) throw new Error ("API is not responding. Please try again.");
 
-      if (response.ok) {
         const data = await response.json();
-        const antonymList =
-          data[0]?.meanings?.flatMap((meaning) => meaning.antonyms) || [];
+        const antonymList =data[0]?.meanings?.flatMap((meaning) => meaning.antonyms) || [];
+
         if (antonymList.length > 0) return antonymList;
-        else {
-          setMessage("Sorry, no antonyms found for this word. Play again.");
-          setTimeout(() => navigate("/GameMode"), 2000);
-          return [];
-        }
-      }
-    } catch (error) {
-      setMessage("Fetching words faild, Please try again later or try other Modes");
-      setTimeout(()=>navigate("/GameMode"),2000);
+        handleError("Sorry, no antonyms found for this word. Play again.");
+        return [];
+        }  catch (error) {
+      handleError("Fetching words faild, Please try again later or try other Modes");
       return [];
     }
   };
