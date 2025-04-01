@@ -159,7 +159,6 @@ const synonymModeStore= create ((set, get) =>({
 { word: "witty" },
 { word: "yoga" },
 { word: "altruistic" },
-{ word: "disciplined" },
 { word: "elusive" },
 { word: "flawless" },
 { word: "gracious" },
