@@ -5,7 +5,6 @@ import App from './App.jsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import GameMode from './components/GameMode.jsx'
 import Home from './components/Home.jsx'
-import CommingSoon from './components/CommingSoon.jsx'
 import AntonymMode from './components/AntonymMode.jsx'
 import SynonymMode from './components/SynonymMode.jsx'
 
@@ -17,7 +16,6 @@ root.render (
       <Route path="/" element={<Home />} />
       <Route path="/GameMode" element={<GameMode />} />
       <Route path="/App" element={<App />} />
-      <Route path="/commingsoon" element={<CommingSoon />} />
       <Route path="/antonym" element={<AntonymMode />} />
       <Route path="/synonym" element={<SynonymMode />} />
 
