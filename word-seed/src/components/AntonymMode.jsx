@@ -106,7 +106,7 @@ const AntonymMode = () => {
         <div>
           <h2 className='font-poppins text-5xl font-bold text-zinc-800 mb-4'>Antonym</h2>
           <AntonymDisplay word={word} />
-
+          
           <input
             type="text"
             value={input}
