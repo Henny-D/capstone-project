@@ -108,6 +108,7 @@ const antonymModeStore= create ((set, get) =>({
 { word: "reliable" },
 { word: "dynamic" },
 { word: "mean" }
+
     ],
 
     getRandomWord: ()=>{

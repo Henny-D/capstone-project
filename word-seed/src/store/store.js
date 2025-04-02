@@ -294,8 +294,7 @@ const useWordStore =create ((set, get) => ({
                         { word: "strong", definition: "Having great power or strength." },
                         { word: "weak", definition: "Not strong; having little strength." },
                         { word: "love", definition: "A strong feeling of liking someone a lot." },
-                        { word: "friend", definition: "Someone you like and enjoy being with." },    
-                    
+                        { word: "friend", definition: "Someone you like and enjoy being with." },      
                 { word: "splendid", definition: "Very impressive or beautiful." }
     ],
 
