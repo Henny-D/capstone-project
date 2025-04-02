@@ -3,14 +3,12 @@ import { create } from "zustand";
 const synonymModeStore= create ((set, get) =>({
     words: [
 
-        {word:"happy"}, {word:"fast"},
-        {word: "strong"}, {word:"helpful"}, { word: "bright" },
-{ word: "big" }, { word: "small" },
+        {word:"happy"}, {word:"fast"}, 
+{ word: "big" }, 
+{ word: "small" }
 
 
 
- 
-{ word: "kind" }
     ],
 
     getRandomWord: ()=>{
