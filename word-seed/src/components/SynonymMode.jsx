@@ -65,6 +65,7 @@ const SynonymMode = () => {
     setGetReady(3);
     setGameStarted(false);
     setInput("");
+    setMessage("");
     loadNewWord();
   };
 

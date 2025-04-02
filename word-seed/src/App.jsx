@@ -17,7 +17,7 @@ const App=() => {
   const [gameStarted, setGameStarted] = useState(false);
   const getRandomWord = useWordStore ((state) => state.getRandomWord);
   const getNewWord = () =>{
-    const newWord =getRandomWord();
+  const newWord =getRandomWord();
     if (newWord) {
       setWord(newWord.word);
     }
