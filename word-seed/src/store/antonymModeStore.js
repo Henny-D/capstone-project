@@ -5,14 +5,14 @@ const antonymModeStore= create ((set, get) =>({
         {word:"happy"}, 
         {word:"fast"},
 { word: "big" }, 
-{ word: "small" }
+{ word: "small" },
 { word: "brave" }, 
 { word: "helpful" }, 
 { word: "friendly" },
 { word: "quiet" }, 
 { word: "loud" },
 { word: "hard" },
- { word: "soft" }, 
+{ word: "soft" }, 
 { word: "clean" },
 { word: "messy" },
 { word: "new" }, 
@@ -108,7 +108,6 @@ const antonymModeStore= create ((set, get) =>({
 { word: "reliable" },
 { word: "dynamic" },
 { word: "mean" }
-
     ],
 
     getRandomWord: ()=>{
